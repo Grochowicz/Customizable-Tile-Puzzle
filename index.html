@@ -1,8 +1,29 @@
-<h1>Click on a piece and then on another to switch their positions</h1>
+<b>Click on a piece and then on another to switch their positions</b>
 <script>
 var img = new Image();
 img.src = "https://upload.wikimedia.org/wikipedia/commons/b/bb/Yugo_SKS.jpg";
-var Cols = 10;
-var Rows = Cols * img.height/img.width;
-alert(Cols + " x " + Rows);
+img.onload = Cut();
+var rows = 10;
+var cols = rows * img.width/img.height;
+
+function Draw ()
+  {
+    
+  }
+function Cut ()
+{
+    for (w=0;w<cols;w++)
+  {
+    for (h=0;h<rows;h++)
+    {
+      document.createElement('canvas');
+      canvas.width = img.width/cols;
+      canvas.height = img.height/rows;
+      var context = canvas.getContext('2d');
+      context.drawImage(img, w*canvas.width, h*canvas.height, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
+      imagePieces.push(canvas.toDataURL());
+      Draw();
+    }
+  }
+}
 </script>
