@@ -6,6 +6,7 @@ img.src = "https://upload.wikimedia.org/wikipedia/commons/b/bb/Yugo_SKS.jpg";
 var rows = 10;
 var cols = rows * img.width/img.height;
 var imgPieces = [];
+var drawnImgs = [];
 
 Cut();
 function Cut ()
@@ -28,7 +29,6 @@ function Draw ()
   {
     for (i=0;i<imgPieces.length;i++)
     {
-      var drawnImgs = [];
       drawnImgs[i] = document.createElement('img');
       drawnImgs[i].src = imgPieces[i];
     }
