@@ -11,8 +11,10 @@ function Cut ()
 {
     for (w=0;w<cols;w++)
   {
+      alert("for 1 executed");
     for (h=0;h<rows;h++)
     {
+        alert("for 2 executed");
       document.createElement('canvas');
       canvas.width = img.width/cols;
       canvas.height = img.height/rows;
