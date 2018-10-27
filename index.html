@@ -7,15 +7,6 @@ var rows = 10;
 var cols = rows * img.width/img.height;
 var imgPieces = [];
 
-function Draw ()
-  {
-    for (i=0;i<imgPieces.length;i++)
-    {
-      var drawnImgs = [];
-      drawnImgs[i] = document.createElement('img');
-      drawnImgs[i].src = imgPieces[i];
-    }
-  }
 function Cut ()
 {
     for (w=0;w<cols;w++)
@@ -32,4 +23,13 @@ function Cut ()
   }
   Draw();
 }
+function Draw ()
+  {
+    for (i=0;i<imgPieces.length;i++)
+    {
+      var drawnImgs = [];
+      drawnImgs[i] = document.createElement('img');
+      drawnImgs[i].src = imgPieces[i];
+    }
+  }
 </script>
