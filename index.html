@@ -12,6 +12,7 @@ function Draw ()
   }
 function Cut ()
 {
+  var imgPieces = [];
     for (w=0;w<cols;w++)
   {
     for (h=0;h<rows;h++)
@@ -21,7 +22,7 @@ function Cut ()
       canvas.height = img.height/rows;
       var context = canvas.getContext('2d');
       context.drawImage(img, w*canvas.width, h*canvas.height, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
-      imagePieces.push(canvas.toDataURL());
+      imgPieces.push(canvas.toDataURL());
       Draw();
     }
   }
