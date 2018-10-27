@@ -5,14 +5,17 @@ img.src = "https://upload.wikimedia.org/wikipedia/commons/b/bb/Yugo_SKS.jpg";
 img.onload = Cut();
 var rows = 10;
 var cols = rows * img.width/img.height;
+var imgPieces = [];
 
 function Draw ()
   {
-    
+    for (i=0;i<imgPieces.length;i++)
+    {
+       document.createElement("img");
+    }
   }
 function Cut ()
 {
-  var imgPieces = [];
     for (w=0;w<cols;w++)
   {
     for (h=0;h<rows;h++)
