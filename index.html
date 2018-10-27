@@ -12,12 +12,13 @@ function Draw ()
     for (i=0;i<imgPieces.length;i++)
     {
       var drawnImgs = [];
-      drawnImgs[i] = document.createElement("img");
+      drawnImgs[i] = document.createElement('img');
       drawnImgs[i].src = imgPieces[i];
     }
   }
 function Cut ()
 {
+  alert("cutting");
     for (w=0;w<cols;w++)
   {
     for (h=0;h<rows;h++)
