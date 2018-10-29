@@ -21,14 +21,17 @@ function Cut ()
       var context = canvas.getContext('2d');
       context.drawImage(img, w*canvas.width, h*canvas.height, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
       imgPieces.push(canvas.toDataURL());
-      Draw(i);
     }
   }
+  Draw();
 }
-function Draw (i)
+function Draw ()
   {
+    for(i=0;i<imgPieces.length;i++)
+    {
       drawnImgs[i] = document.createElement('img');
       drawnImgs[i].src = imgPieces[i];
       document.body.appendChild(drawnImgs[i]);
+    }
   }
 </script>
