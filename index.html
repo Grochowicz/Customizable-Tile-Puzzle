@@ -27,8 +27,8 @@ function Cut ()
       for (r=0;r<rows;r++)
       {
          var br = document.createElement('br');
-         document.getElementsByTagName("img")[r*(Math.floor(cols))].appendChild(br);
-         document.getElementsByTagName("img")[r*(Math.floor(cols))].border = 1;
+         document.getElementsByTagName("img")[r*(Math.round(cols))].appendChild(br);
+         document.getElementsByTagName("img")[r*(Math.round(cols))].border = 1;
       }
 }
   function Draw ()
