@@ -28,6 +28,8 @@ function Cut ()
       {
          var br = document.createElement('br');
          document.getElementsByTagName("img")[r*(Math.round(cols))].appendChild(br);
+         document.getElementsByTagName("img")[r*(Math.round(cols))].className = "rowFirst";
+         //v temporary indentifying border v
          document.getElementsByTagName("img")[r*(Math.round(cols))].border = 1;
       }
 }
