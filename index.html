@@ -24,15 +24,9 @@ function Cut ()
     }
   }
   Draw();
-    
-  for (r=0;r>rows;r++)
-  {
-    alert("for hap");
-    var br = document.createElement('br');
-    document.getElementsByTagName("img")[r*cols].appendChild(br);
-  }
+  LineBreak();
 }
-function Draw ()
+  function Draw ()
   {
     for(i=0;i<imgPieces.length;i++)
     {
@@ -41,4 +35,13 @@ function Draw ()
       document.body.appendChild(drawnImgs[i]);
     }
   }
+    function LineBreak()
+    {
+        for (r=0;r>rows;r++)
+        {
+             alert("for hap");
+             var br = document.createElement('br');
+             document.getElementsByTagName("img")[r*cols].appendChild(br);
+        }
+    }
 </script>
