@@ -24,7 +24,6 @@ function Cut ()
     }
   }
   Draw();
-  LineBreak();
 }
   function Draw ()
   {
@@ -34,6 +33,7 @@ function Cut ()
       drawnImgs[i].src = imgPieces[i];
       document.body.appendChild(drawnImgs[i]);
     }
+      LineBreak();
   }
     function LineBreak()
     {
