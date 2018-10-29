@@ -28,6 +28,7 @@ function Cut ()
       {
          var br = document.createElement('br');
          document.getElementsByTagName("img")[r*(Math.floor(cols))].appendChild(br);
+         document.getElementsByTagName("img")[r*(Math.floor(cols))].border = 1;
       }
 }
   function Draw ()
