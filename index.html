@@ -22,18 +22,16 @@ function Cut ()
       context.drawImage(img, w*canvas.width, h*canvas.height, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
       imgPieces.push(canvas.toDataURL());
     }
-    var br = document.createElement('br');
-    document.body.appendChild(br);
   }
   Draw();
-      //for (r=0;r<rows;r++)
-      //{
-        // var br = document.createElement('br');
-         //document.getElementsByTagName("img")[r*(Math.round(cols))].appendChild(br);
-         //document.getElementsByTagName("img")[r*(Math.round(cols))].className = "rowFirst";
+      for (r=0;r<rows;r++)
+      {
+         var br = document.createElement('br');
+         document.getElementsByTagName("img")[r*(Math.round(cols))].appendChild(br);
+         document.getElementsByTagName("img")[r*(Math.round(cols))].className = "rowFirst";
          //v temporary indentifying border v
-//         document.getElementsByTagName("img")[r*(Math.round(cols))].border = 1;
-  //    }
+         document.getElementsByTagName("img")[r*(Math.round(cols))].border = 1;
+      }
 }
   function Draw ()
   {
