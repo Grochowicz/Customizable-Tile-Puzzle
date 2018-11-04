@@ -9,14 +9,14 @@
     }
 </style>
 <b>Click on a piece and then on another to switch their positions</b><br>
+<div class = "bg"></div>
 <script>
 var img = new Image();
 img.setAttribute('crossOrigin', 'annonymous');
 img.src = "https://upload.wikimedia.org/wikipedia/commons/b/bb/Yugo_SKS.jpg";
-var bg = new Image();
+var bg = document.getElementsByClassName("bg")[0];
 bg.width = img.width;
 bg.height = img.height;
-bg.className = "bg";
 document.body.appendChild(bg);
 var rows = 10;
 var cols = rows * img.width/img.height;
@@ -39,14 +39,6 @@ function Cut ()
     }
   }
   Draw();
-//      for (r=0;r<rows;r++)
- //     {
-//         var br = document.createElement('br');
-//         document.getElementsByTagName("img")[(r*(Math.round(cols)))+(Math.round(cols)-1)].className = "rowLast";
- //        document.getElementsByTagName("img")[(r*(Math.round(cols)))+(Math.round(cols)-1)].appendChild(br);
-         //v temporary indentifying border v
-//         document.getElementsByClassName("rowLast").border = 1;
- //     }
 }
   function Draw ()
   {
