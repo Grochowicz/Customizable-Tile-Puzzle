@@ -27,8 +27,8 @@ function Cut ()
       for (r=0;r<rows;r++)
       {
          var br = document.createElement('br');
-         document.getElementsByTagName("img")[r*(Math.round(cols))].appendChild(br);
-         document.getElementsByTagName("img")[r*(Math.round(cols))].className = "rowFirst";
+         document.getElementsByTagName("img")[r*(Math.round(cols))+Math.round(cols)].appendChild(br);
+         document.getElementsByTagName("img")[r*(Math.round(cols))+Math.round(cols)].className = "rowLast";
          //v temporary indentifying border v
          document.getElementsByTagName("img")[r*(Math.round(cols))].border = 1;
       }
