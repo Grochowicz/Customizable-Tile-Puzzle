@@ -27,10 +27,10 @@ function Cut ()
       for (r=0;r<rows;r++)
       {
          var br = document.createElement('br');
-         document.getElementsByTagName("img")[r*(Math.round(cols))+Math.round(cols)-1].appendChild(br);
          document.getElementsByTagName("img")[r*(Math.round(cols))+Math.round(cols)-1].className = "rowLast";
+         document.getElementsByClassName("rowLast").appendChild(br);
          //v temporary indentifying border v
-         document.getElementsByTagName("img")[r*(Math.round(cols))+Math.round(cols)-1].border = 1;
+         document.getElementsByClassName("rowLast").border = 1;
       }
 }
   function Draw ()
