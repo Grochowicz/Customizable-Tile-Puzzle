@@ -33,14 +33,14 @@ function Cut ()
     }
   }
   Draw();
-      for (r=0;r<rows;r++)
-      {
-         var br = document.createElement('br');
-         document.getElementsByTagName("img")[(r*(Math.round(cols)))+(Math.round(cols)-1)].className = "rowLast";
-         document.getElementsByTagName("img")[(r*(Math.round(cols)))+(Math.round(cols)-1)].appendChild(br);
+//      for (r=0;r<rows;r++)
+ //     {
+//         var br = document.createElement('br');
+//         document.getElementsByTagName("img")[(r*(Math.round(cols)))+(Math.round(cols)-1)].className = "rowLast";
+ //        document.getElementsByTagName("img")[(r*(Math.round(cols)))+(Math.round(cols)-1)].appendChild(br);
          //v temporary indentifying border v
-         document.getElementsByClassName("rowLast").border = 1;
-      }
+//         document.getElementsByClassName("rowLast").border = 1;
+ //     }
 }
   function Draw ()
   {
@@ -48,6 +48,8 @@ function Cut ()
     {
       drawnImgs[i] = document.createElement('img');
       drawnImgs[i].src = imgPieces[i];
+      drawnImgs[i].className = "drawnImg";
+      document.body.appendChild(drawnImgs[i]);
       document.getElementsByClassName("bg")[0].appendChild(drawnImgs[i]);
     }
   }
