@@ -10,7 +10,7 @@
 var img = new Image();
 img.setAttribute('crossOrigin', 'annonymous');
 img.src = "https://upload.wikimedia.org/wikipedia/commons/b/bb/Yugo_SKS.jpg";
-img.class = "bg";
+img.className = "bg";
 document.body.appendChild(img);
 var rows = 10;
 var cols = rows * img.width/img.height;
@@ -36,8 +36,8 @@ function Cut ()
       for (r=0;r<rows;r++)
       {
          var br = document.createElement('br');
-         document.getElementsByTagName("img")[r*(Math.round(cols))+Math.round(cols)-1].className = "rowLast";
-         document.getElementsByTagName("img")[r*(Math.round(cols))+Math.round(cols)-1].appendChild(br);
+         document.getElementsByTagName("img")[(r*(Math.round(cols)))+(Math.round(cols)-1)].className = "rowLast";
+         document.getElementsByTagName("img")[(r*(Math.round(cols)))+(Math.round(cols)-1)].appendChild(br);
          //v temporary indentifying border v
          document.getElementsByClassName("rowLast").border = 1;
       }
