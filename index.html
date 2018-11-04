@@ -15,7 +15,7 @@ var img = new Image();
 img.setAttribute('crossOrigin', 'annonymous');
 img.src = "https://upload.wikimedia.org/wikipedia/commons/b/bb/Yugo_SKS.jpg";
 var bg = document.getElementsByClassName("bg")[0];
-bg.width = img.width;
+bg.width = img.width-59;
 bg.height = img.height;
 document.body.appendChild(bg);
 var rows = 10;
