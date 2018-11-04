@@ -37,7 +37,7 @@ function Cut ()
       {
          var br = document.createElement('br');
          document.getElementsByTagName("img")[r*(Math.round(cols))+Math.round(cols)-1].className = "rowLast";
-         document.getElementsByClassName("rowLast").appendChild(br);
+         document.getElementsByTagName("img")[r*(Math.round(cols))+Math.round(cols)-1]).appendChild(br);
          //v temporary indentifying border v
          document.getElementsByClassName("rowLast").border = 1;
       }
@@ -48,7 +48,7 @@ function Cut ()
     {
       drawnImgs[i] = document.createElement('img');
       drawnImgs[i].src = imgPieces[i];
-      document.body.appendChild(drawnImgs[i]);
+      document.getElementsByClassName("bg")[0].appendChild(drawnImgs[i]);
     }
   }
 </script>
