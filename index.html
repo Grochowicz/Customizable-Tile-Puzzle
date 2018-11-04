@@ -4,7 +4,7 @@
         flex-flow: row wrap;
     }
     .drawnImg {
-        flex: 1;
+        flex: 0;
         opacity: 1;
     }
 </style>
@@ -15,7 +15,7 @@ var img = new Image();
 img.setAttribute('crossOrigin', 'annonymous');
 img.src = "https://upload.wikimedia.org/wikipedia/commons/b/bb/Yugo_SKS.jpg";
 var bg = document.getElementsByClassName("bg")[0];
-bg.width = img.width-59;
+bg.width = img.width;
 bg.height = img.height;
 document.body.appendChild(bg);
 var rows = 10;
